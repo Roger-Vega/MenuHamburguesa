@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Menu Hamburguesa</title>
+</head>
+<body>
+	<span class="boton-hamburguesa icon-menu" id="boton-hamburguesa"></span>
+	<nav class="menu" id="menu">
+		<ul>
+			<li class="opcion">Opción 1</li>
+			<li class="opcion">Opción 2</li>
+			<li class="opcion">Opción 3</li>
+		</ul>
+	</nav>
+	<script>
+		$burguerButton = document.getElementById('boton-hamburguesa');
+		$menu = document.getElementById('menu');
+
+		$burguerButton.addEventListener('click', menu);
+		$menu.addEventListener('click', menu);
+
+		function menu(){
+			$menu.classList.toggle('active');
+			$burguerButton.classList.toggle('icon-close');
+		}
+	</script>
+</body>
+</html>
